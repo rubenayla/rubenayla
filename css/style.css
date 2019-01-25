@@ -1,173 +1,44 @@
-/* Primary color is CYAN(300,700,900) */
-
-html {
-    font-size: 16px;
+html, body {
+    background-color: #000;
+	background-image: url('../images/colorful.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     
-}
-body {
-	/*background-color: #000000;*/
 	font-family: 'Open Sans', sans-serif;
-	
+	color: #fff;
+    
+    
+
 }
 
 header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	overflow: visible;
-	width: 100%;
-	/*height: 56px;*/
-	margin: 0;
-	padding: 0;
-	border: 0;
-	background-color: #0097A7;
-	box-shadow: 0px 0px 4px #000000;
-}
-
-footer {
-	/* HOW TO MAKE IT POSITION LIKE THE HEADER RELATIVE TO THE END OF THE CONTENT */
-	background-color: #0097A7;
-	width: 100%;
-}
-
-footer nav {
-	display: inline-block;
-	margin: 10px 30px;
-}
-
-footer nav a {
-	display: block;
-	
-}
-
-.main-div {
-    position: absolute; /*default*/
-	/* Debajo del header */
-    margin: 56px 0px 0px 0px;
-    padding: 2%;
+    position: fixed;
+    top: 0;
+    width: 100%;
     
+	z-index: 1;
+    overflow: visible;
+    background-color: #000c;
+    box-shadow: 0px 0px 4px #000000;
+
+    padding: 10px 16px;
+}
+
+.menu_item {
+    padding: 8px 12px;
+}
+
+.home {
+    margin-top: 50px;
+    background-color: #f00a;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
+    color: #fff;
+
 }
 
 a:hover {
-    color:blue;
+    text-decoration: underline;
 }
-
-.toolbar {
-	width: 100%;
-	height: inherit;
-	/*background-color:none;*/
-	
-}
-
-.toolbar-left {
-	/* With float: left it doesn't take all the space of the line */
-	float: left;
-    width: 40%;
-    /*margin: 19px 12px;*/
-	padding-left: 12px;
-}
-
-/* The main menu elements */
-.toolbar-left a {
-	position: static;
-	float: left;
-    display: inline-block;
-	margin: 0px;
-    padding: 18.5px 12px;
-    color: #90e0E0;
-    
-}
-
-.toolbar-left a:hover {
-    color: aliceblue;
-}
-
-.toolbar-right {
-    float: right;
-    width: 40%;
-	/* 16 * 2 + 24 = 56 */
-	margin: 16px 12px;
-}
-
-.toolbar-right i {
-	position: static;
-    float: right;
-    display: inline-block;
-	margin: 0px;
-    padding: 0px 12px;
-	/* Size of icons */
-    font-size: 24px;
-    color: aliceblue;
-}
-
-.toolbar-right input {
-	position: static;
-    float: right;
-	display: inline-block;
-    width: 25%;
-    margin: 3px 12px;
-    padding: 0px 12px;
-    border: none;
-    border-radius: 12px;
-    background-color: aliceblue;
-}
-
-#add-button {
-    position: absolute;
-	/* Que sobresalga por debajo del header */
-    bottom: -1rem;
-    left: 47%;
-	align-items: center;
-	
-}
-
-
-/* RESPONSIVE */
-
-@media only screen and (max-width: 1000px) {
-	header {
-		/*bottom: 0;*/
-		/*background: linear-gradient(to bottom right, #4DD0E1,#006064);*/
-	}
-	
-}
-@media only screen and (max-width: 13cm) {
-	header {
-		bottom: 0;
-		top: auto;
-	}
-	
-	#add-button {
-    	top: -1rem;
-		
-	}
-	
-	.main-div {
-    	margin: 0px 0px 56px 0px;
-	}
-}
-
-/*<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="small-device.css" />*/
-
-
-
-
-
-
-
-
-/*COLORS*/
-.dark-primary-color    	{ background: #006064; }
-.default-primary-color 	{ background: #0097A7; }
-.light-primary-color   	{ background: #4DD0E1; }
-.text-primary-color    	{ color: #FFFFFF; }
-.accent-color          	{ background: #FF4081; }
-.primary-text-color    	{ color: #212121; }
-.secondary-text-color  	{ color: #90e0E0; }
-.divider-color         	{ border-color: #BDBDBD; }
-.default-secondary-color{ color: #ED4783; }
