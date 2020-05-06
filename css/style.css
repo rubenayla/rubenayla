@@ -3,7 +3,7 @@
   --body-color: #000;
 
   --header-bkg-color: #fff;
-  --header-li-color: #000;
+  --header-color: #000;
   --header-border-color: #e4e4e4;
 
   --body-bkg-color: #fff;
@@ -44,7 +44,6 @@ body {
 	 body has relative position.*/
   position: relative;
   min-height: 100vh;
-	padding-bottom: 120px;/*Space for the footer*/
   background: var(--body-bkg-color);
 	font-family: 'Open Sans', Roboto, Helvetica, sans-serif;
 	color: var(--body-color);
@@ -53,30 +52,34 @@ header {
   position: relative;
   width: 100%;
   background: var(--header-bkg-color);
-  border-bottom: 1px solid var(--footer-border-color);
+  border-bottom: 1px solid var(--header-border-color);
 }
-#header {
+.header {
   display: flex;
   justify-content: center;
+  font-size: 1rem;
 }
-#header > nav > ul {
+.header nav ul {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-#header > nav > ul > li {
+.header nav ul li {
   display: flex;
+}
+.header a { /*.header > nav > ul > li > a {*/
+  padding: calc((40px - 24.33px)/2); /*40px - font height = total padding*/
+  text-decoration: none;
+	color: var(--header-color);
   border: 3px solid transparent;
 }
-#header > nav > ul > li > a {
-	font-weight: 300;
-	color: var(--header-li-color);
-	text-decoration: none;
-	padding: 10px 10px;
+#active {
+  font-weight: bold;
+  border-bottom: 3px solid var(--header-color);
 }
 
-#body{
+.body{
 	display: flex;
 	justify-content: center;
 	width: 100%;
@@ -95,7 +98,6 @@ header {
 
 
 
-
 footer{
   position: absolute;
   width: 100%;
@@ -105,7 +107,7 @@ footer{
 	background: var(--footer-bkg-color);
   border-top: 1px solid var(--footer-border-color);
 }
-#footer{
+.footer{
 	text-align: center;
 	color: var(--footer-color);
 	padding: 7.5px 0;
