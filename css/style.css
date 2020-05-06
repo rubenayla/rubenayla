@@ -1,35 +1,130 @@
-html, body {
-	font-family: 'Open Sans', sans-serif;
-	color: #fff;
-	background: url('../images/san_blurred.jpg') no-repeat center fixed;
-	background-size: cover;
+:root {
+  --body-bkg-color: #fff;
+  --body-color: #000;
 
-	
+  --header-bkg-color: #fff;
+  --header-li-color: #000;
+  --header-border-color: #e4e4e4;
+
+  --body-bkg-color: #fff;
+
+  --footer-bkg-color: #f0f0f0;
+  --footer-border-color: #e4e4e4;
+  --footer-color: #222;
 }
 
-.boxes {
-	background: linear-gradient(#0000, #0007);
-	border-radius: 12px;
-	padding: 12px 16px;
+* {
+	box-sizing: border-box;
 }
 
-.boxes_constant {
-	background: #0005;
-	border-radius: 12px;
-	padding: 12px 16px;
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: #eee;
+}
+::-webkit-scrollbar-thumb {
+	background: #bbb;
+	border-radius: 50px;
+	border-left: solid 1px #eee;
+	border-right: solid 1px #eee;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #888;
 }
 
-
-
-a {
-	color: white;
-
+body {
+  /*min-height 100vh (not 100%. Would be of the html)
+	 to keep the footer down when there isn't content. But
+	 a padding at the bottom, below the footer, so that it
+	 doesn't overlap the content. It would do that because
+	 it's position is absolute, so that the bottom property
+	 works. The bottom property works relative to the nearest
+	 parent element that hasn't static positioning, so the
+	 body has relative position.*/
+  position: relative;
+  min-height: 100vh;
+	padding-bottom: 120px;/*Space for the footer*/
+  background: var(--body-bkg-color);
+	font-family: 'Open Sans', Roboto, Helvetica, sans-serif;
+	color: var(--body-color);
 }
-
-a:hover {
-	color: #ccc;
+header {
+  position: relative;
+  width: 100%;
+  background: var(--header-bkg-color);
+  border-bottom: 1px solid var(--footer-border-color);
+}
+#header {
+  display: flex;
+  justify-content: center;
+}
+#header > nav > ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#header > nav > ul > li {
+  display: flex;
+  border: 3px solid transparent;
+}
+#header > nav > ul > li > a {
+	font-weight: 300;
+	color: var(--header-li-color);
 	text-decoration: none;
+	padding: 10px 10px;
+}
+
+#body{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background: var(--body-bkg-color);
+	min-height: calc(100vh - calc(33px + 44px));
+}
+
+.post {
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 1000px;
+	padding: 25px;
 }
 
 
 
+
+
+
+footer{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+	background: var(--footer-bkg-color);
+  border-top: 1px solid var(--footer-border-color);
+}
+#footer{
+	text-align: center;
+	color: var(--footer-color);
+	padding: 7.5px 0;
+}
+
+
+
+
+
+
+
+
+
+/*TODO:
+  scroll bar px to dp
+  header que se haga pequeñito ~4px al hacer scroll, y que se vuelva a hacer grande al hacer hover con el mouse
+  botón que cambie las variables del root y tenga un modo noche
+
+
+
+  */
